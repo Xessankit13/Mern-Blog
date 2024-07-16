@@ -11,8 +11,8 @@ export default function Header() {
         to='/'
         className='self-center whitespace-nowrap text-sm sm:text-xl font-bold dark:text-white'
       >
-        <span className='px-2 py-1 font-bold rounded-lg text-purple-600'>
-         Daily
+        <span className='pl-2 py-1 font-bold rounded-lg text-purple-600'>
+         My
         </span>
         Blog
       </Link>
