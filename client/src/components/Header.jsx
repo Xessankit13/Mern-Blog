@@ -9,12 +9,12 @@ export default function Header() {
     <Navbar className='border-b-2'>
       <Link
         to='/'
-        className='self-center whitespace-nowrap text-sm sm:text-xl font-bold dark:text-white'
+        className='self-center whitespace-nowrap text-sm sm:text-2xl font-bold dark:text-white'
       >
-        <span className='pl-2 py-1 font-bold rounded-lg text-purple-600'>
+        <span className='pl-2 py-1 font-bold rounded-lg text-blue-400'>
          My
         </span>
-        Blog
+        <span className='text-blue-600'>Blog</span>
       </Link>
       <form>
         <TextInput
@@ -32,7 +32,7 @@ export default function Header() {
           <FaMoon />
         </Button>
         <Link to='/sign-in'>
-        <Button color="purple">Sign In</Button>
+        <Button gradientDuoTone='purpleToBlue' outline>Sign In</Button>
         </Link>
         <Navbar.Toggle />
       </div>
@@ -42,6 +42,9 @@ export default function Header() {
         </Navbar.Link>
         <Navbar.Link active={path === "/about"} as={'div'}>
           <Link to='/about'>About</Link>
+        </Navbar.Link>
+        <Navbar.Link active={path === "/projects"} as={'div'}>
+          <Link to='/projects'>Projects</Link>
         </Navbar.Link>
        
       </Navbar.Collapse>
