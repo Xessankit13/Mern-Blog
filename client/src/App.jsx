@@ -10,6 +10,7 @@ import PrivateRoute from './components/PrivateRoute';
 import CreatePost from './pages/CreatePost'
 import { Link } from 'react-router-dom';
 import OnlyAdminPrivateRoute from './components/OnlyAdminPrivateRoute'
+import UpdatePost from './pages/UpdatePost'
 export default function App() {
   return (
     <BrowserRouter className="text-3xl font-bold underline">
@@ -24,6 +25,7 @@ export default function App() {
         </Route>
         <Route element={<OnlyAdminPrivateRoute />}>
           <Route path='/create-post' element={<CreatePost />} />
+          <Route path='/update-post/:postId' element={<UpdatePost />} />
         </Route>
     </Routes>
     <FooterCom/>
